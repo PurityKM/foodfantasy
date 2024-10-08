@@ -1,0 +1,13 @@
+[{
+        "id": 1,
+        "title": "Spaghetti Carbonara",
+        "videoUrl": "https://www.example.com/video1.mp4",
+        "ingredients": ["Pasta", "Eggs", "Bacon", "Parmesan"]
+    },
+    {
+        "id": 2,
+        "title": "Garlic Butter Shrimp",
+        "videoUrl": "https://www.example.com/video2.mp4",
+        "ingredients": ["Shrimp", "Garlic", "Butter", "Parsley"]
+    }
+]
