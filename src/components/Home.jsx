@@ -30,10 +30,10 @@ const Home = () => {
     setMustHaveIngredient(selectedIngredient);
   };
 
-  // Fetch videos from YouTube API based on selected ingredients
-  const fetchRecipeVideos = async () => {
-    const apiKey = 'AIzaSyBOTrcXlyeRF-F2cgN6DROgLJxQt67qgX4'; // Add your YouTube Data API key here
-    const searchQuery = selectedIngredients.join(' ') + ' recipe'; // Create search query from ingredients
+  // Fetch videos from YouTube API based on selected ingredients or random videos
+  const fetchRecipeVideos = async (query = '') => {
+    const apiKey = 'YOUR_YOUTUBE_API_KEY'; // Add your YouTube Data API key here
+    const searchQuery = query ? query + ' recipe' : 'random recipe'; // Create search query from ingredients or use default
 
     try {
       const response = await axios.get(
@@ -45,10 +45,13 @@ const Home = () => {
     }
   };
 
-  // UseEffect hook to fetch videos whenever ingredients change
+  // UseEffect hook to fetch videos
   useEffect(() => {
     if (selectedIngredients.length > 0) {
-      fetchRecipeVideos();
+      const searchQuery = selectedIngredients.join(' ');
+      fetchRecipeVideos(searchQuery);
+    } else {
+      fetchRecipeVideos(); // Fetch random videos if no ingredients are selected
     }
   }, [selectedIngredients]);
 
@@ -137,7 +140,7 @@ const Home = () => {
               </div>
             ))
           ) : (
-            <p>No videos found. Add ingredients to find recipes!</p>
+            <p>Loading recipes...</p>
           )}
         </div>
       </div>
