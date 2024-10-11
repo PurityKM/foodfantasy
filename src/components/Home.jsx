@@ -32,7 +32,7 @@ const Home = () => {
 
   // Fetch videos from YouTube API based on selected ingredients or random videos
   const fetchRecipeVideos = async (query = '') => {
-    const apiKey = 'YOUR_YOUTUBE_API_KEY'; // Add your YouTube Data API key here
+    const apiKey = 'AIzaSyBOTrcXlyeRF-F2cgN6DROgLJxQt67qgX4'; // Add your YouTube Data API key here
     const searchQuery = query ? query + ' recipe' : 'random recipe'; // Create search query from ingredients or use default
 
     try {
