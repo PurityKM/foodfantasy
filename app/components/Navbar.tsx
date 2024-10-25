@@ -10,10 +10,10 @@ const Navbar = () => {
         <a href="#home" className="text-white hover:underline">
         Home
       </a>
-      <a href="#about" className="text-white hover:underline">
+      <a href="#howto" className="text-white hover:underline">
         How to
       </a>
-      <a href="#contact" className="text-white hover:underline">
+      <a href="#meals" className="text-white hover:underline">
       Meals     </a>
       <a href="#add_recipes" className="text-white hover:underline">
         Add Recipes
@@ -21,10 +21,10 @@ const Navbar = () => {
       <a href="#language" className="text-white hover:underline">
         Language
       </a>
-      <a href="#language" className="text-white hover:underline">
+      <a href="#register" className="text-white hover:underline">
        Register
       </a>
-      <a href="#language" className="text-white hover:underline">
+      <a href="#login" className="text-white hover:underline">
         Login
       </a>
           {/* <Link to="/" className="text-white hover:underline">
