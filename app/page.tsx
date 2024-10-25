@@ -1,7 +1,9 @@
 'use client'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 const Home = () => {
   // State to manage must-have ingredient, entered ingredients, and video data
@@ -180,11 +182,14 @@ const Home = () => {
                 {video.snippet.description}
               </p>
               {video.snippet.thumbnails?.medium && (
-                <img
-                  src={video.snippet.thumbnails.medium.url}
-                  alt={video.snippet.title}
-                  className='w-full h-auto object-cover rounded-md mt-4'
-                />
+                <Image
+                src={video.snippet.thumbnails.medium.url}
+              alt={video.snippet.title}
+              width={320}  // Adjust based on desired width
+          height={180}
+                className=" rounded-md mt-4"
+              />
+              
               )}
               <a
                 href={`https://www.youtube.com/watch?v=${video.id.videoId}`}
